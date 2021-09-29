@@ -27,6 +27,17 @@ public class Employee {
 
     public Employee(){ }
 
+    public Employee(int employeeNumber, String lastName, String firstName, String extension, String email, int officeCode, int reportsTo, String jobTitle) {
+        this.employeeNumber = employeeNumber;
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.extension = extension;
+        this.email = email;
+        this.officeCode = officeCode;
+        this.reportsTo = reportsTo;
+        this.jobTitle = jobTitle;
+    }
+
     public int getEmployeeNumber() {
         return employeeNumber;
     }
@@ -89,5 +100,19 @@ public class Employee {
 
     public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeNumber=" + employeeNumber +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", extension='" + extension + '\'' +
+                ", email='" + email + '\'' +
+                ", officeCode=" + officeCode +
+                ", reportsTo=" + reportsTo +
+                ", jobTitle='" + jobTitle + '\'' +
+                '}';
     }
 }
